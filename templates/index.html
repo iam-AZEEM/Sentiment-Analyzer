@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentiment Analyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="app-shell">
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Sentiment analysis <span style="font-size: 0.75em; font-weight: 500;">by Syed Azeem</span></p>
+          <h1>Understand how your audience feels.</h1>
+          <p class="subtitle">
+            Paste a review, comment, or sentence and let the model classify it as positive or negative in seconds.
+          </p>
+        </div>
+
+        <div class="input-card">
+          <label for="reviewText">Enter text to analyze</label>
+          <textarea
+            id="reviewText"
+            rows="8"
+            placeholder="Example: This product is absolutely amazing and exceeded my expectations."
+          ></textarea>
+
+          <div class="chip-row">
+            <button class="chip" type="button" data-example="This movie was absolutely wonderful and emotionally powerful.">Wonderful review</button>
+            <button class="chip" type="button" data-example="This service was terrible and I regret using it.">Terrible review</button>
+            <button class="chip" type="button" data-example="The app is decent, but the loading speed could be improved.">Balanced review</button>
+          </div>
+
+          <button id="analyzeBtn" class="primary-btn" type="button">Analyze Sentiment</button>
+        </div>
+      </section>
+
+      <section id="resultPanel" class="result-card hidden">
+        <div class="result-header">
+          <div>
+            <p class="eyebrow">Prediction</p>
+            <h2 id="resultTitle">Positive</h2>
+          </div>
+          <div class="score-pill" id="scorePill">0.00</div>
+        </div>
+
+        <div class="meter">
+          <div id="confidenceFill" class="meter-fill"></div>
+        </div>
+
+        <div class="result-meta">
+          <div>
+            <span class="label">Confidence</span>
+            <strong id="confidenceValue">0%</strong>
+          </div>
+          <div>
+            <span class="label">Input text</span>
+            <strong id="inputPreview">—</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
