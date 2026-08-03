@@ -1,0 +1,28 @@
+{
+  "trained_at": "2026-08-04T00:40:24",
+  "config": {
+    "vocab_size": 20000,
+    "max_len": 200,
+    "embedding_dim": 128,
+    "batch_size": 64,
+    "epochs_configured": 15,
+    "epochs_ran": 4,
+    "seed": 42
+  },
+  "test_loss": 0.3423902690410614,
+  "test_accuracy": 0.8518800139427185,
+  "test_precision": 0.84544098013037,
+  "test_recall": 0.8612,
+  "test_f1": 0.8532477311457218,
+  "confusion_matrix": [
+    [
+      10532,
+      1968
+    ],
+    [
+      1735,
+      10765
+    ]
+  ],
+  "classification_report": "              precision    recall  f1-score   support\n\n    negative       0.86      0.84      0.85     12500\n    positive       0.85      0.86      0.85     12500\n\n    accuracy                           0.85     25000\n   macro avg       0.85      0.85      0.85     25000\nweighted avg       0.85      0.85      0.85     25000\n"
+}
