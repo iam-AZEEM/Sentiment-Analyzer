@@ -10,9 +10,6 @@ pinned: false
 
 # Sentiment Analyzer
 
-A web app that classifies text (movie reviews, comments, feedback, etc.) as **Positive** or **Negative**...
-# Sentiment Analyzer
-
 A web app that classifies text (movie reviews, comments, feedback, etc.) as **Positive** or **Negative**, powered by a Bidirectional LSTM trained on the IMDB movie reviews dataset. Built with TensorFlow/Keras for the model and Flask for the web interface.
 
 ## Demo
