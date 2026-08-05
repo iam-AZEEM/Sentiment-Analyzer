@@ -7,7 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# HF Spaces requires port 7860
-EXPOSE 7860
+EXPOSE 10000
 
-CMD ["gunicorn", "-b", "0.0.0.0:7860", "app:app", "--timeout", "120"]
+CMD gunicorn -b 0.0.0.0:$PORT app:app --timeout 120
