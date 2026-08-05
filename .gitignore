@@ -30,3 +30,15 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Git
+.git/
+.gitignore
+
+# HF Spaces / misc
+README.md
+.gitattributes
+
+# Test files (if any)
+tests/
+*.test.py
