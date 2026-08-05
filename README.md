@@ -1,3 +1,16 @@
+---
+title: Movie Sentiment Analyzer
+emoji: 🎬
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
+# Sentiment Analyzer
+
+A web app that classifies text (movie reviews, comments, feedback, etc.) as **Positive** or **Negative**...
 # Sentiment Analyzer
 
 A web app that classifies text (movie reviews, comments, feedback, etc.) as **Positive** or **Negative**, powered by a Bidirectional LSTM trained on the IMDB movie reviews dataset. Built with TensorFlow/Keras for the model and Flask for the web interface.
@@ -77,7 +90,7 @@ This downloads the IMDB dataset, trains the LSTM, and saves `sentiment_model.ker
 python app.py
 ```
 
-Open `http://localhost:5000` in your browser.
+Open `http://localhost:7860` in your browser.
 
 To enable Flask's debug mode for local development:
 
